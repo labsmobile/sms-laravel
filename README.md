@@ -4,7 +4,7 @@
 
 # LabsMobile-Laravel
 
-![](https://img.shields.io/badge/version-1.0.0-blue.svg)
+![](https://img.shields.io/badge/version-3.1.1-blue.svg)
  
 Send SMS text messages through the LabsMobile platform and the plugin for Laravel. Install the "sms-laravel" plugin and in a few seconds you'll be able to send SMS messages.
 
