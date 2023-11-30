@@ -1,25 +1,51 @@
-Simple SMS
-==========
+<p align="center">
+  <img src="https://avatars.githubusercontent.com/u/152215067?s=200&v=4" height="80">
+</p>
 
-[![Build Status](https://travis-ci.org/SimpleSoftwareIO/simple-sms.svg?branch=master)](https://travis-ci.org/SimpleSoftwareIO/simple-sms)
-[![Latest Stable Version](https://poser.pugx.org/simplesoftwareio/simple-sms/v/stable.svg)](https://packagist.org/packages/simplesoftwareio/simple-sms)
-[![Latest Unstable Version](https://poser.pugx.org/simplesoftwareio/simple-sms/v/unstable.svg)](https://packagist.org/packages/simplesoftwareio/simple-sms)
-[![License](https://poser.pugx.org/simplesoftwareio/simple-sms/license.svg)](https://packagist.org/packages/simplesoftwareio/simple-sms)
-[![Total Downloads](https://poser.pugx.org/simplesoftwareio/simple-sms/downloads.svg)](https://packagist.org/packages/simplesoftwareio/simple-sms)
+# LabsMobile-Laravel
 
-## Looking into upgrading this package and bringing in more features for the latest Laravel 7.  Is this interest in this?  [Comment Here](https://github.com/SimpleSoftwareIO/simple-sms/issues/79)
+![](https://img.shields.io/badge/version-1.0.0-blue.svg)
+ 
+Send SMS text messages through the LabsMobile platform and the plugin for Laravel. Install the "sms-laravel" plugin and in a few seconds you'll be able to send SMS messages.
 
-## Introduction
-Simple SMS is an easy to use package for [Laravel](http://laravel.com/) that adds the capability to send and receive SMS/MMS messages to mobile phones from your web app. It currently supports a free way to send SMS messages through E-Mail gateways provided by the wireless carriers. The package also supports 9 paid services, [Call Fire,](https://www.callfire.com/) [EZTexting,](https://www.eztexting.com) [FlowRoute,](https://www.flowroute.com/) [LabsMobile,](http://www.labsmobile.com) [Mozeo,](https://www.mozeo.com/) [Nexmo,](https://www.nexmo.com/) [Plivo,](https://www.plivo.com/) [Twilio,](https://www.twilio.com) [Zenvia,](http://www.zenvia.com.br/) and [JustSend.](http://www.justsend.pl/)
+## Documentation
 
-## Official Documentation
+- Labsmobile API documentation can be found [here][apidocs].
+- Documentation for Simple SMS can be found on our [website.](https://www.simplesoftware.io/#/docs/simple-sms)
 
-Documentation for Simple SMS can be found on our [website.](https://www.simplesoftware.io/#/docs/simple-sms)
+## Features
+- Send SMS messages.
 
-## Contributing
+## Requirements
 
-Please submit all issues and pull requests to the [simplesoftwareio/simple-sms](https://github.com/simplesoftwareio/simple-sms) repository on the develop branch!
+- Laravel. More information at [Laravel.com][Laravel].
+- Simple-SMS plugin. More information at [Laravel plugin: simple-sms][simple-sms].
+- A user account with LabsMobile. Click on the link to create an account [Sign up][signUp].
 
-## License
+## Installation
 
-This software is released under the [MIT license.](https://opensource.org/licenses/MIT)
+1. Install the sms plugin into your Laravel installation.
+
+2. Configure the plugin with the parameters of your LabsMobile account.
+  ```php
+      return [
+          'driver' => 'labsmobile',
+          'from' => 'Sender',
+          'labsmobile' => [
+              'client' => 'Your Client Key',
+              'username' => 'Your Username',
+              'password' => 'Your Password',
+              'test' => '1 for simulate mode; 0 for real sendings'
+          ]
+      ];
+  ```
+3. Now you can use all the features of the plugin.
+
+## Help
+
+If you have questions, you can contact us through the support chat or through the support email support@labsmobile.com.
+
+[apidocs]: https://www.labsmobile.com/en/api-sms/api-versions/http-get
+[signUp]: https://www.labsmobile.com/en/signup
+[Laravel]:https://laravel.com/
+[simple-sms]:https://github.com/SimpleSoftwareIO/simple-sms
